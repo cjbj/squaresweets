@@ -2,5 +2,4 @@ User-agent: *
 Disallow: /images/
 Disallow: /stylesheets/
 Disallow: /javascript/
-Disallow: /graphics/
 Disallow: /default-skin/
