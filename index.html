@@ -8,101 +8,137 @@
     <meta name="description" content="">
     <meta name="author" content="Christopher Jones">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="static/css/skeleton.css">
-    <link rel="stylesheet" href="static/css/colorbox.css">
+
+    <link rel="stylesheet" href="static/css/normalize.css">
+    <link rel="stylesheet" href="static/themes/classic/galleria.classic.css">
     <link rel="stylesheet" href="static/css/style.css">
+    <style>
+    body::after{
+        position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+        content:url(20030511_af557_24_injinoo.jpg);
+    }</style>
   </head>
   <body>
     <div class="container">
-      <div class="three columns">
-        <div class="sidebar">
-          <h1><a href="./">
-          Square Sweets Photography
-          </a></h1>
-<footer>
-            <h3>Christopher&nbsp;Jones, San&nbsp; Francisco, California</h3>
-      <p><strong>images@SquareSweets.com<br>
-+1 415 704 1845</strong></p>
+      <header>
+        <h1><a href="./">Square Sweets Photography</a></h1>
+
+      </header>
+
+      <div id="main" role="main">
+        <div class="icons">
+          <a id="fullscreen"><img src="static/img/fullscreen.png"
+            title="Fullscreen" alt="Fullscreen (f)" /></a>
+        </div>
+        <div id="gallery"></div>
+
+
+        <div id="description">
+          <h3>Christopher Jones, San Francisco, California</h3>
+<p><strong>Email: images @ SquareSweets.com  &nbsp;&nbsp;  Telephone: +1 415 704 1845</strong></p>
 <p><sub>Images Copyright © Christopher Jones 2009, 2020. All Rights Reserved.</sub></p>
-</footer>        </div>
+        </div>
       </div>
-      <div id="main" role="main" class="nine columns offset-by-three">
-        <header>
-        </header>
+   </div>
+
+    <script src="static/jquery-3.3.1.min.js"></script>
+    <script src="static/galleria.min.js"></script>
+    <script src="static/themes/classic/galleria.classic.min.js"></script>
+    <script src="static/plugins/history/galleria.history.min.js"></script>
+    <script>
+    var data = [
+{
+        title: "Returning from a fishing trip, Sunset, Injinoo",
+        description: "<div class='film-meta'></div>",
+        thumb: "thumbnails/20030511_af557_24_injinoo.jpg",
+        image: "20030511_af557_24_injinoo.jpg"
+      },
+{
+        title: "Polapan Rocks, #4 (Frame 1), Trinity Beach",
+        description: "<br>Expired Polaroid slide film.<div class='film-meta'></div>",
+        thumb: "thumbnails/20060904_ff15_10_11_12_rock.jpg",
+        image: "20060904_ff15_10_11_12_rock.jpg"
+      },
+{
+        title: "Chairs and Flowers, San Francisco",
+        description: "<div class='film-meta'></div>",
+        thumb: "thumbnails/20070527_af702_41_flowers.jpg",
+        image: "20070527_af702_41_flowers.jpg"
+      },
+{
+        title: "Night Canal, Amsterdam",
+        description: "<div class='film-meta'></div><abbr title='camera make and model'>Nikon LS-50</abbr>",
+        thumb: "thumbnails/20090614_af831_08_nightcanal.jpg",
+        image: "20090614_af831_08_nightcanal.jpg"
+      },
+{
+        title: "Iceland",
+        description: "<div class='film-meta'></div><abbr title='camera make and model'>Nikon LS-50</abbr>",
+        thumb: "thumbnails/20140709_af987_22_iceland.jpg",
+        image: "20140709_af987_22_iceland.jpg"
+      },
+{
+        title: "Rock, Bouddi National Park",
+        description: "<div class='film-meta'></div><abbr title='camera make and model'>Nikon LS-50</abbr>",
+        thumb: "thumbnails/20180829_af1007_25_bouddi.jpg",
+        image: "20180829_af1007_25_bouddi.jpg"
+      },
+{
+        title: "Old Pier, Bridport",
+        description: "<div class='film-meta'><abbr title='film speed'>100</abbr><abbr title='exposure'>0.005</abbr><abbr title='aperture'>16.0</abbr><abbr title='focal length'>35</abbr></div><abbr title='camera make and model'>NIKON CORPORATION NIKON D750</abbr>",
+        thumb: "thumbnails/DSC_4011.jpg",
+        image: "DSC_4011.jpg"
+      },
+{
+        title: "Calla Lilies, Point Reyes",
+        description: "<div class='film-meta'><abbr title='film speed'>100</abbr><abbr title='exposure'>0.0025</abbr><abbr title='aperture'>2.4</abbr><abbr title='focal length'>4</abbr></div><abbr title='camera make and model'>LGE Nexus 5</abbr>",
+        thumb: "thumbnails/IMG_20150312_175733.jpg",
+        image: "IMG_20150312_175733.jpg"
+      },
+{
+        title: "Shed, Strahan",
+        description: "<div class='film-meta'><abbr title='film speed'>400</abbr><abbr title='exposure'>0.0015625</abbr><abbr title='aperture'>9.0</abbr><abbr title='focal length'>18</abbr></div><abbr title='camera make and model'>NIKON CORPORATION NIKON D7000</abbr>",
+        thumb: "thumbnails/strahan_shed.jpg",
+        image: "strahan_shed.jpg"
+      },
+    ]
 
 
+    Galleria.ready(function() {
+        /*
+        load thumbnails after gallery setup, and download has started
+        for the main images, but before the loading of map tiles starts
+        in the background. This ensures visible elements are prioritised
+        over non-visible elements
 
-  <div id="gallery">
-      <div id="albums" class="row">
-      <div class="four columns thumbnail">
-        <a href="20030511_af557_24_injinoo.jpg" class="gallery" title="Returning from a fishing trip, Sunset, Injinoo"
-          >
-          <img src="thumbnails/20030511_af557_24_injinoo.jpg" alt="20030511_af557_24_injinoo.jpg"
-              title="Returning from a fishing trip, Sunset, Injinoo" /></a>
-      </div>
-      <div class="four columns thumbnail">
-        <a href="20060904_ff15_10_11_12_rock.jpg" class="gallery" title="Polapan Rocks, #4 (Frame 1), Trinity Beach"
-          >
-          <img src="thumbnails/20060904_ff15_10_11_12_rock.jpg" alt="20060904_ff15_10_11_12_rock.jpg"
-              title="Polapan Rocks, #4 (Frame 1), Trinity Beach" /></a>
-      </div>
-      <div class="four columns thumbnail">
-        <a href="20070527_af702_41_flowers.jpg" class="gallery" title="Chairs and Flowers, San Francisco"
-          >
-          <img src="thumbnails/20070527_af702_41_flowers.jpg" alt="20070527_af702_41_flowers.jpg"
-              title="Chairs and Flowers, San Francisco" /></a>
-      </div>
-      </div>
-      <div id="albums" class="row">
-      <div class="four columns thumbnail">
-        <a href="20090614_af831_08_nightcanal.jpg" class="gallery" title="Night Canal, Amsterdam"
-          >
-          <img src="thumbnails/20090614_af831_08_nightcanal.jpg" alt="20090614_af831_08_nightcanal.jpg"
-              title="Night Canal, Amsterdam" /></a>
-      </div>
-      <div class="four columns thumbnail">
-        <a href="20140709_af987_22_iceland.jpg" class="gallery" title="Iceland"
-          >
-          <img src="thumbnails/20140709_af987_22_iceland.jpg" alt="20140709_af987_22_iceland.jpg"
-              title="Iceland" /></a>
-      </div>
-      <div class="four columns thumbnail">
-        <a href="20180829_af1007_25_bouddi.jpg" class="gallery" title="Rock, Bouddi National Park"
-          >
-          <img src="thumbnails/20180829_af1007_25_bouddi.jpg" alt="20180829_af1007_25_bouddi.jpg"
-              title="Rock, Bouddi National Park" /></a>
-      </div>
-      </div>
-      <div id="albums" class="row">
-      <div class="four columns thumbnail">
-        <a href="DSC_4011.jpg" class="gallery" title="Old Pier, Bridport"
-          >
-          <img src="thumbnails/DSC_4011.jpg" alt="DSC_4011.jpg"
-              title="Old Pier, Bridport" /></a>
-      </div>
-      <div class="four columns thumbnail">
-        <a href="IMG_20150312_175733.jpg" class="gallery" title="Calla Lilies, Point Reyes"
-          >
-          <img src="thumbnails/IMG_20150312_175733.jpg" alt="IMG_20150312_175733.jpg"
-              title="Calla Lilies, Point Reyes" /></a>
-      </div>
-      <div class="four columns thumbnail">
-        <a href="strahan_shed.jpg" class="gallery" title="Shed, Strahan"
-          >
-          <img src="thumbnails/strahan_shed.jpg" alt="strahan_shed.jpg"
-              title="Shed, Strahan" /></a>
-      </div>
-      </div>
-  </div>
+        The choice to lazy load thumbnails in batches of 50 was not made
+        scientifically. Other numbers may yield better performance.
+        */
+        this.lazyLoadChunks( 50 );
 
+        this.attachKeyboard({
+            right: this.next,
+            left: this.prev,
+            /* Toggle fullscreen display on press of 'f' key */
+            0x46: this.toggleFullscreen,
+        });
 
+        var gallery = this;
+        $('#fullscreen').click(function() {
+          gallery.toggleFullscreen();
+        });
 
-      </div>
-    </div>
-  <script src="static/js/jquery-2.2.1.min.js"></script>
-  <script src="static/js/jquery.colorbox-min.js"></script>
-  <script src="static/js/jquery.touchSwipe.min.js"></script>
+        $('.icons').appendTo(this.$('container'));
 
-  <script src="static/js/app.js"></script>
+    });
+
+    Galleria.configure({
+        imageCrop: false,
+        transition: "fade",
+        thumbnails: "lazy"
+    });
+    Galleria.run("#gallery", {dataSource: data});
+
+    </script>
   </body>
 </html>
