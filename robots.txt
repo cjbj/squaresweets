@@ -1,5 +1,3 @@
 User-agent: *
-Disallow: /images/
-Disallow: /stylesheets/
-Disallow: /javascript/
-Disallow: /default-skin/
+Disallow: /static/
+Disallow: /thumbnails/
