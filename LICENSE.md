@@ -1,1 +1,1 @@
-All images Copyright © 2016, 2022, Christopher Jones.
+All images Copyright © 2009, 2024, Christopher Jones.

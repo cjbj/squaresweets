@@ -1,215 +1,80 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Square Sweets</title>
-    <meta name="description" content="">
-    <meta name="author" content="Christopher Jones">
-    <meta name="viewport" content="width=device-width">
-
-    <link rel="stylesheet" href="static/css/normalize.css">
-    <link rel="stylesheet" href="static/themes/classic/galleria.classic.css">
-    <link rel="stylesheet" href="static/css/style.css">
-    <style>
-    body::after{
-        position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
-        content:url(01_strahan_shed.jpg);
-    }</style>
+    <link href="./css/base.css" rel="stylesheet" type="text/css">
+    <link href="./css/mm-columns.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="container">
-      <header>
-        <h1><a href="./">Square Sweets Photography</a></h1>
+      <h1>Square Sweets Photography</h1>
+      <h2>Christopher Jones</h2>
+      <p><strong>Email: images @ SquareSweets.com  &nbsp;&nbsp;  Telephone: +1 415 704 1845</strong></p>
 
-      </header>
-
-      <div id="main" role="main">
-        <div class="icons">
-          <a id="fullscreen"><img src="static/img/fullscreen.png"
-            title="Fullscreen" alt="Fullscreen (f)" /></a>
+      <div class="mm-columns">
+	<div class="mm-columns__item">
+	  <img class="mm-columns__img" alt="photo" src="./images/20240212_af1035_30_kalametiyabirds.jpg">
+	</div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/PXL_20231007_001923259.jpg">
         </div>
-        <div id="gallery"></div>
-
-
-        <div id="description">
-          <h3>Christopher Jones, San Francisco, California</h3>
-<p><strong>Email: images @ SquareSweets.com  &nbsp;&nbsp;  Telephone: +1 415 704 1845</strong></p>
-<p><sub>Images Copyright © 2009, 2024, Christopher Jones</sub></p>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/02_20090614_af831_08_nightcanal.jpg">
         </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/03_20180829_af1007_25_bouddi.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/04_DSC_4011.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/07_20060904_ff15_10_11_12_rock.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/19980309_af086_25A_itch.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/19980500_af092_03_adelaide_j.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/20001122_cf25_1_swanrv.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/20030216_af528_29_aero.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/20030504_af553_02a_rain.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/20080000_af776_07_delicatessen.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/20090425_af812_25_basketball.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/20100616_af875_23_citynight.jpg">
+        </div>
+        <div class="mm-columns__item">
+          <img class="mm-columns__img" alt="photo" src="./images/20220424_af1014_36_pandani.jpg">
+	</div>
+	<div class="mm-columns__item">
+	  <img class="mm-columns__img" alt="photo" src="./images/20231012_af1026_25_tokyo_meijijingu.jpg">
+	</div>
+	<div class="mm-columns__item">
+	  <img class="mm-columns__img" alt="photo" src="./images/20240207_af1033_25_singletreehill.jpg">
+	</div>
+	<div class="mm-columns__item">
+	  <img class="mm-columns__img" alt="photo" src="./images/20240215_af1037_16_lunuganga.jpg">
+	</div>
       </div>
-<!-- <footer>
-  <p>
-      <span>&copy; Christopher Jones</span>
-    
-  </p>
-</footer> -->    </div>
+</div>
 
-    <script src="static/jquery-3.3.1.min.js"></script>
-    <script src="static/galleria.min.js"></script>
-    <script src="static/themes/classic/galleria.classic.min.js"></script>
-    <script src="static/plugins/history/galleria.history.min.js"></script>
-    <script>
-    var data = [
-
-/*
-
-      {
-        title: "",
-        description: "",
-        thumb: "thumbnails/",
-        image: ""
-      },
-
-*/
-
-      {
-        title: "Storks at dawn, Kalametiya Bird Sanctuary, Sri Lanka",
-        description: "",
-        thumb: "thumbnails/20240212_af1035_30_kalametiyabirds.jpg",
-        image: "20240212_af1035_30_kalametiyabirds.jpg"
-      },           
-      {
-        title: "Gate House, Lunuganga, Sri Lanka",
-        description: "",
-        thumb: "thumbnails/20240215_af1037_16_lunuganga.jpg",
-        image: "20240215_af1037_16_lunuganga.jpg"
-      },
-      {
-        title: "Weathered, carbonized house, Naoshima Island, Japan",
-        description: "",
-        thumb: "thumbnails/PXL_20231007_001923259.jpg",
-        image: "PXL_20231007_001923259.jpg"
-      },
-      {
-        title: "Night Canal, Amsterdam, 2009",
-        description: "",
-        thumb: "thumbnails/02_20090614_af831_08_nightcanal.jpg",
-        image: "02_20090614_af831_08_nightcanal.jpg"
-      },
-      {
-        title: "Meiji Jingu shrine, Shibuya, Tokyo",
-        description: "",
-        thumb: "thumbnails/20231012_af1026_25_tokyo_meijijingu.jpg",
-        image: "20231012_af1026_25_tokyo_meijijingu.jpg"
-      },
-      {
-        title: "Stupa, Single Tree Hill, Nuwara Eliya, Sri Lanka",
-        description: "",
-        thumb: "thumbnails/20240207_af1033_25_singletreehill.jpg",
-        image: "20240207_af1033_25_singletreehill.jpg"
-      },
-      {
-        title: "Aerobatics, Avalon Airshow, 2003",
-        description: "",
-        thumb: "thumbnails/20030216_af528_29_aero.jpg",
-        image: "20030216_af528_29_aero.jpg"
-      },
-      {
-        title: "Old Pier, Bridport",
-        description: "",
-        thumb: "thumbnails/04_DSC_4011.jpg",
-        image: "04_DSC_4011.jpg"
-      },
-      {
-        title: "Rock, Bouddi National Park",
-        description: "",
-        thumb: "thumbnails/03_20180829_af1007_25_bouddi.jpg",
-        image: "03_20180829_af1007_25_bouddi.jpg"
-      },
-      {
-        title: "Polapan Rocks, #4 (Frame 1), Trinity Beach",
-        description: "",
-        thumb: "thumbnails/07_20060904_ff15_10_11_12_rock.jpg",
-        image: "07_20060904_ff15_10_11_12_rock.jpg"
-      },
-      {
-        title: "Itch, Sydney",
-        description: "",
-        thumb: "thumbnails/19980309_af086_25A_itch.jpg",
-        image: "19980309_af086_25A_itch.jpg"
-      },
-      {
-        title: "Boys in an old Valiant Regal, Adelaide",
-        description: "",
-        thumb: "thumbnails/19980500_af092_03_adelaide_j.jpg",
-        image: "19980500_af092_03_adelaide_j.jpg"
-      },
-      {
-        title: "End of Year Party, Swan River, South Perth",
-        description: "",
-        thumb: "thumbnails/20001122_cf25_1_swanrv.jpg",
-        image: "20001122_cf25_1_swanrv.jpg"
-      },
-      {
-        title: "Rainy Road, Queensland Cane Fields, Bruce Highway",
-        description: "",
-        thumb: "thumbnails/20030504_af553_02a_rain.jpg",
-        image: "20030504_af553_02a_rain.jpg"
-      },
-      {
-        title: "Delicatessen, San Francisco",
-        description: "",
-        thumb: "thumbnails/20080000_af776_07_delicatessen.jpg",
-        image: "20080000_af776_07_delicatessen.jpg"
-      },
-      {
-        title: "Night Basketball, Stallings Playground, New Orleans",
-        description: "",
-        thumb: "thumbnails/20090425_af812_25_basketball.jpg",
-        image: "20090425_af812_25_basketball.jpg"
-      },
-      {
-        title: "San Francisco from Treasure Island",
-        description: "",
-        thumb: "thumbnails/20100616_af875_23_citynight.jpg",
-        image: "20100616_af875_23_citynight.jpg"
-      },
-      {
-        title: "Old Pandani leaves, Mt Field National Park",
-        description: "",
-        thumb: "thumbnails/20220424_af1014_36_pandani.jpg",
-        image: "20220424_af1014_36_pandani.jpg"
-      },
-    ]
+<div>
+        <p><sub>Images Copyright © 2009, 2024, Christopher Jones</sub></p>
+</div>
 
 
-    Galleria.ready(function() {
-        /*
-        load thumbnails after gallery setup, and download has started
-        for the main images, but before the loading of map tiles starts
-        in the background. This ensures visible elements are prioritised
-        over non-visible elements
-
-        The choice to lazy load thumbnails in batches of 50 was not made
-        scientifically. Other numbers may yield better performance.
-        */
-        this.lazyLoadChunks( 50 );
-
-        this.attachKeyboard({
-            right: this.next,
-            left: this.prev,
-            /* Toggle fullscreen display on press of 'f' key */
-            0x46: this.toggleFullscreen,
-        });
-
-        var gallery = this;
-        $('#fullscreen').click(function() {
-          gallery.toggleFullscreen();
-        });
-
-        $('.icons').appendTo(this.$('container'));
-
-    });
-
-    Galleria.configure({
-        imageCrop: false,
-        transition: "fade",
-        thumbnails: "lazy"
-    });
-    Galleria.run("#gallery", {dataSource: data});
-
-    </script>
   </body>
 </html>
